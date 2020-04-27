@@ -1,0 +1,1 @@
+https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js

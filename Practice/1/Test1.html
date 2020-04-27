@@ -1,0 +1,54 @@
+<HTML ng-app="">
+<HEAD>
+<TITLE>test1</TITLE>
+<script src="../../Latest/Minified/angular.min.js"></script>
+<style type="text/css">
+	body{
+		background-color: {{txtColor}};
+		font-size: {{selSize}}
+	}
+</style>
+</HEAD>
+<BODY>
+	{{"AKNSS"}}
+<br/>
+	{{ 1.5 + 4 }}
+<br/>
+	{{ "This" + " Is" }}
+<hr/>
+<fieldset>
+	<legend>
+		Angular Variables
+	</legend>
+	<input type="input" ng-model="txtStrVar" />
+	<br/>
+	Runtime Value of txtStrVar = {{txtStrVar}}
+	<br/>
+	Runtime Field Update: <span ng-bind="txtStrVar" style="color: red"></span>
+	<hr>
+	Enter Color: <input type="input" ng-model="txtColor" name="">
+	Select Size: 
+	<select ng-model="selSize">
+		<option value="10">Ten</option>
+		<option value="15">10 & 5</option>
+		<option value="20">Twenty</option>
+		<option>30</option>
+		<option value="30">Thirty(ByVal)</option>
+	</select>
+	Conclusion: It takes selected item's Talue first if exists else takes selected item's Text
+</fieldset>
+<hr/>
+<b>ng-init & ng-repeat</b>
+<br/>
+<div ng-init="[fName='Mohammad', mName='Qayamuddin', lName='Ansari']">
+	{{fName + ' ' + mName + ' ' + lName}}
+</div>
+<br/>
+<div ng-init="MyName=['Mohammad', 'Qayamuddin', 'Ansari']">
+	<div ng-repeat="obj in MyName">
+		{{obj}}
+	</div>
+</div>
+
+</BODY>
+</HTML>

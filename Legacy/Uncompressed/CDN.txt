@@ -1,0 +1,1 @@
+https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js
