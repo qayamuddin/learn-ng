@@ -1,7 +1,13 @@
-<HTML ng-app="">
+<HTML ng-app="CombineModule">
 <HEAD>
 <TITLE>test1</TITLE>
-<script src="../../Latest/Minified/angular.min.js"></script>
+
+<script src="../../Latest/Minified/angular.min.js">
+</script>
+
+<script src="assets/mod/mycustoms.js">
+</script>
+
 <style type="text/css">
 	body{
 		background-color: {{txtColor}};
@@ -35,7 +41,7 @@
 		<option>30</option>
 		<option value="30">Thirty(ByVal)</option>
 	</select>
-	Conclusion: It takes selected item's Talue first if exists else takes selected item's Text
+	Conclusion: It takes selected item's Value first if exists else takes selected item's Text
 </fieldset>
 <hr/>
 <b>ng-init & ng-repeat</b>
@@ -48,7 +54,45 @@
 	<div ng-repeat="obj in MyName">
 		{{obj}}
 	</div>
+	<br/>
+	By Index:
+	<br/>
+	<div>
+		<b>First Name:</b> {{MyName[0]}} 
+		<b>Mid Name:</b> {{MyName[1]}}
+		<b>Last Name:</b> {{MyName[2]}}  
+	</div>
 </div>
+<hr/>
+<b>Module & Controller</b>
 
+	<div ng-controller="myController">
+		Output from <b>myMod</b>: {{myVar + ' ' + myVar1 + ' ' + myVar2}}
+	</div>
+<br/>
+	<div ng-controller="myController1">
+		This is function call : {{ myFunc() }}
+		<br>
+		Menual:
+		<br>
+		<input type="input" ng-model="a">
+		<input type="input" ng-model="b">
+		<br>
+		<b>Simple calc</b>
+		<input type="input" ng-model="opA">
+		<select ng-model="opEx">
+			<option value="0" selected>Select arithmetic operations</option>
+			<option value="1">+</option>
+			<option value="2">-</option>
+			<option value="3">x</option>
+			<option value="4">/</option>
+		</select>
+		<input type="input" ng-model="opB">
+		= {{ simpleCalc() }}
+	</div>
+<br/>
+	<div ng-controller="myCtrl">
+		Output from <b>myMod -> myCtrl</b>: {{myVar + ' ' + myVar1 + ' ' + myVar2}}
+	</div>
 </BODY>
 </HTML>
